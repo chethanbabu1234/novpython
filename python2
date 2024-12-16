@@ -7,27 +7,81 @@
 #     print('number is zero')
 
 
-maths=int(input('enter maths marks'))
-phy=int(input('enter phy marks'))
-chem=int(input('enter chem marks'))
-total_marks=600
-sum_marks=maths+phy+chem
-per=(sum_marks/total_marks)*100
-print(per)
-if per<35:
-    print('grade is f')
-elif per>35 and per<=50:
-    print('grade is c')
-elif per in range(51,91):
-    print('grade is b')
-elif per in range(91,101):
-    print('grade is a')
-else:
-    print('invalid per')
+#maths=int(input('enter maths marks'))
+#phy=int(input('enter phy marks'))
+#chem=int(input('enter chem marks'))
+#total_marks=600
+#sum_marks=maths+phy+chem
+#per=(sum_marks/total_marks)*100
+#print(per)
+#if per<35:
+#    print('grade is f')
+#elif per>35 and per<=50:
+#    print('grade is c')
+#elif per in range(51,91):
+#    print('grade is b')
+#elif per in range(91,101):
+#    print('grade is a')
+#else:
+#    print('invalid per')
 
 
 
+def calculate_ticket_price(age):
+    # Ticket price conditions
+    if 18 <= age <= 30:
+        return 5  # $5 for ages 18 to 30
+    elif 30 < age <= 50:
+        return 20  # $20 for ages 30 to 50
+    elif age > 50:
+        return 0  # Free for ages above 50
+    else:
+        return "Invalid age for entry"  # Age below 18
+
+def convert_to_inr(usd_amount):
+    # Assuming 1 USD = 83 INR
+    exchange_rate = 83
+    return usd_amount * exchange_rate
+
+# User input for age
+try:
+    age = int(input("Enter your age: "))
+    ticket_price_usd = calculate_ticket_price(age)
+    
+    if isinstance(ticket_price_usd, int):  # Ensure it's a valid price
+        ticket_price_inr = convert_to_inr(ticket_price_usd)
+        print(f"Ticket price in USD: ${ticket_price_usd}")
+        print(f"Ticket price in Indian Rupees: ₹{ticket_price_inr}")
+    else:
+        print(ticket_price_usd)  # Message for invalid age
+    
+except ValueError:
+    print("Invalid input! Please enter a valid age")
+ 
 
 
 
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
