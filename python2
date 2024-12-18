@@ -27,61 +27,41 @@
 
 
 
-def calculate_ticket_price(age):
-    # Ticket price conditions
-    if 18 <= age <= 30:
-        return 5  # $5 for ages 18 to 30
-    elif 30 < age <= 50:
-        return 20  # $20 for ages 30 to 50
-    elif age > 50:
-        return 0  # Free for ages above 50
-    else:
-        return "Invalid age for entry"  # Age below 18
+# age=int(input('enter your age:'))
+# usd_to_inr=80
+# if age>=18 and age<=50:
+#     cost=5 * usd_to_inr
+# elif age>30 and age<=50:
+#     cost =20 * usd_to_inr
 
-def convert_to_inr(usd_amount):
-    # Assuming 1 USD = 83 INR
-    exchange_rate = 83
-    return usd_amount * exchange_rate
 
-# User input for age
-try:
-    age = int(input("Enter your age: "))
-    ticket_price_usd = calculate_ticket_price(age)
-    
-    if isinstance(ticket_price_usd, int):  # Ensure it's a valid price
-        ticket_price_inr = convert_to_inr(ticket_price_usd)
-        print(f"Ticket price in USD: ${ticket_price_usd}")
-        print(f"Ticket price in Indian Rupees: ₹{ticket_price_inr}")
-    else:
-        print(ticket_price_usd)  # Message for invalid age
-    
-except ValueError:
-    print("Invalid input! Please enter a valid age")
+
+# name=input('enter name')
+# exp=int(input(f'enter{name}experience'))
+# if exp>=1:
+#     if exp>=1 and exp<=5:
+#         print('25k')
+#     elif exp>=6 and exp<=10:
+#         print('50k')
+#     else:
+#         print('75k')
+# else:
+#     print('not allowed')
+
+
+while True:
+ print('1.payment failed')
+ print('2.profile and privacy')
+ print('3.money transfer')
+ print('4.exit')
+ user_inp=int(input('enter your choice:'))
+ if user_inp==1:
+     print('welcome to payment failed')
+ elif user_inp==2:
+     print('welcome to profile and privacy')
+ elif user_inp==3:
+     print('welcome to money transfer')
+ elif user_inp==4:
+     print('exit')
+     break
  
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
